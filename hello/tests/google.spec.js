@@ -9,7 +9,9 @@ test('ผู้ใช้งานทำการค้นหาคำว่า�
   await seachField.fill('หวย');
   await seachField.press('Enter');
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright2/);
+  // Assert "ผลการค้นหาประมาณ 101,000,000 รายการ (0.36 วินาที)"
+  // Assert text in id=result-stats
+  await expect(page.locator('#result-stats')).toHaveText(/ผลการค้นหาประมาณ2/);
+  
 });
 
