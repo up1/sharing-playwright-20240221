@@ -5,7 +5,7 @@ test('ผู้ใช้งานทำการค้นหาคำว่า�
   await page.goto('https://www.google.com/');
 
   // Type into search box.
-  const seachField = await page.locator('#APjFqb');
+  const seachField = page.locator('#APjFqb');
   await seachField.fill('หวย');
   await seachField.press('Enter');
 
