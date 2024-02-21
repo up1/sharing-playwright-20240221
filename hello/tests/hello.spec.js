@@ -7,5 +7,7 @@ test('Hello XXX', async ({ page }) => {
   // Expect a title "to contain" a substring.
 
   await expect(page.getByTestId('message_text')).toHaveText('Call REST API');
-  await expect(page.getByTestId('hello_text')).toHaveText('Hello World!');
+  
+  const helloText = page.getByTestId('hello_text');
+  await expect(helloText).toHaveText('Hello World!');
 });
